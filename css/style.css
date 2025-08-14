@@ -1,0 +1,107 @@
+body {
+    background-color: #333;
+    background: #ffffff url(/assets/sunset-alps-3840x2160-23236.jpg)center center/cover no-repeat content-box;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+    margin: 0;
+}
+
+#company-logo {
+    width: 40px ;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: auto; /* pushes the rest to the right */
+}
+
+nav {
+    background-color: #1a1a1a;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dark-button {
+    background-color: #1a1a1a;
+    color: #fff;
+    border: none;
+    padding: 12px 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+}
+.dark-button:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.watch.icon {
+  color: #000;
+  position: absolute;
+  margin-left: 7px;
+  margin-top: 0px;
+  width: 5px;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+  height: 19px;
+  border-radius: 1px;
+  border: solid 1px currentColor;
+}
+
+.watch.icon:before {
+  content: '';
+  position: absolute;
+  left: -4px;
+  top: 3px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: solid 1px currentColor;
+  background-color: white;
+}
+
+.watch.icon:after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 5px;
+  width: 3px;
+  height: 4px;
+  border-left: solid 1px currentColor;
+  border-bottom: solid 1px currentColor;
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: translateY(250px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+
+/* 2. Mobile overrides */
+@media (max-width: 600px) {
+    nav {
+        justify-content: center;
+    }
+
+    #company-logo {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .dark-button {
+        flex: 1 1 100%;
+        text-align: center;
+        margin: 5px 0;
+    }
+}
